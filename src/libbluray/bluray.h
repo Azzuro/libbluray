@@ -714,7 +714,7 @@ int bd_set_player_setting_str(BLURAY *bd, uint32_t idx, const char *value);
 
 typedef enum {
 
-    BD_EVENT_NONE         = 0,  /* no pending events */
+    BD_EVENT_NONE       = 0,  /* no pending events */
 
     /*
      * errors
