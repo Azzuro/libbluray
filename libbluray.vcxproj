@@ -192,7 +192,8 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBBLURAY_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(VisualStudioVersion)' == '12.0'">__STDC_FORMAT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rd_party\freetype2\include;$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <CompileAs Condition="'$(VisualStudioVersion)' == '12.0'">CompileAsCpp</CompileAs>
     </ClCompile>
@@ -200,6 +201,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>libbluray.def</ModuleDefinitionFile>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">3rd_party\freetype2\objs\win32\vc2010\freetype2411_D.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /I /Y "$(OutDir)$(TargetName).lib" "$(OutDir)lib\"</Command>
@@ -221,8 +223,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBBLURAY_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(VisualStudioVersion)' == '12.0'">__STDC_FORMAT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>3rd_party\freetype2\include;$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <CompileAs Condition="'$(VisualStudioVersion)' == '12.0'">CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -231,6 +233,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>libbluray.def</ModuleDefinitionFile>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">3rd_party\freetype2\objs\win32\vc2010\freetype2411.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IgnoreAllDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /I /Y "$(TargetDir)$(TargetName)$(TargetExt)" "$(OutDir)..\"
