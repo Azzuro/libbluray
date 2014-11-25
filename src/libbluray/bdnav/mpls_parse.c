@@ -38,7 +38,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MPLS_SIG1 ('M' << 24 | 'P' << 16 | 'L' << 8 | 'S')
+#define MPLS_SIG1  ('M' << 24 | 'P' << 16 | 'L' << 8 | 'S')
+#define MPLS_SIG2C ('0' << 24 | '2' << 16 | '4' << 8 | '0')
 
 static int
 _parse_uo(BITSTREAM *bits, BD_UO_MASK *uo)

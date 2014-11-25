@@ -38,6 +38,7 @@
 #include <string.h>
 
 #define CLPI_SIG1  ('H' << 24 | 'D' << 16 | 'M' << 8 | 'V')
+#define CLPI_SIG2C ('0' << 24 | '2' << 16 | '4' << 8 | '0')
 
 static int
 _parse_stream_attr(BITSTREAM *bits, CLPI_PROG_STREAM *ss)
