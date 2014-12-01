@@ -3224,6 +3224,9 @@ static int _read_ext(BLURAY *bd, unsigned char *buf, int len, BD_EVENT *event)
     /* run HDMV VM ? */
     if (bd->title_type == title_hdmv) {
 
+      static int max_loops = 0;
+      int loops = 0;
+
         while (!bd->hdmv_suspended) {
 
             if (_run_hdmv(bd) < 0) {
@@ -3231,11 +3234,20 @@ static int _read_ext(BLURAY *bd, unsigned char *buf, int len, BD_EVENT *event)
                 bd->title_type = title_undef;
                 return -1;
             }
+            if (loops > 1000) {
+              BD_DEBUG(DBG_BLURAY | DBG_CRIT, "bd_read_ext(): HDMV mode live lock ? (%d loops)\n", loops);
+              _queue_event(bd, BD_EVENT_ERROR, BD_ERROR_HDMV);
+            }
+
             if (_get_event(bd, event)) {
+              max_loops = BD_MAX(loops, max_loops);
+              if (loops) fprintf(stderr, "loops: %d (EVENT) max %d\n", loops, max_loops);
                 return 0;
             }
+            loops++;
         }
 
+        if (loops>1) fprintf(stderr, "loops: %d (SUSPEND) max %d\n", loops, max_loops);
         if (bd->gc_status & GC_STATUS_ANIMATE) {
             _run_gc(bd, GC_CTRL_NOP, 0);
         }
