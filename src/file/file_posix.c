@@ -33,7 +33,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+typedef long ssize_t;
+#else
 #include <unistd.h>
+#endif
+#include <stddef.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
