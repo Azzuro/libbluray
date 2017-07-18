@@ -383,11 +383,13 @@ NAV_TITLE_LIST* nav_get_title_list(BD_DISC *disc, uint32_t flags, uint32_t min_t
         dir_close(dir);
         return NULL;
     }
-
+#ifdef ENABLE_UDF
     known_mpls_ids = disc_property_get(disc, DISC_PROPERTY_MAIN_FEATURE);
     if (!known_mpls_ids) {
         known_mpls_ids = disc_property_get(disc, DISC_PROPERTY_PLAYLISTS);
     }
+
+#endif
 
     ii = 0;
     for (res = dir_read(dir, &ent); !res; res = dir_read(dir, &ent)) {

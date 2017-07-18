@@ -2313,6 +2313,8 @@ static void _close_playlist(BLURAY *bd)
     _update_uo_mask(bd);
 }
 
+#ifdef ENABLE_UDF 
+
 static int _add_known_playlist(BD_DISC *p, const char *mpls_id)
 {
     char *old_mpls_ids;
@@ -2339,6 +2341,7 @@ static int _add_known_playlist(BD_DISC *p, const char *mpls_id)
     X_FREE(new_mpls_ids);
     return result;
 }
+#endif
 
 static int _open_playlist(BLURAY *bd, const char *f_name, unsigned angle)
 {

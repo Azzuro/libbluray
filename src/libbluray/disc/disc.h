@@ -98,14 +98,14 @@ BD_PRIVATE struct bd_file_s *disc_open_stream(BD_DISC *disc, const char *file);
  * Property name is ASCII string. '=' or '\n' is not allowed in name.
  * property data is UTF8 string without line feeds.
  */
-
+/*
 BD_PRIVATE int   disc_property_put(BD_DISC *disc, const char *property, const char *value);
 BD_PRIVATE char *disc_property_get(BD_DISC *disc, const char *property);
-
-/* "Known" playlists */
+*/
+/* "Known" playlists */ /*
 #define DISC_PROPERTY_PLAYLISTS    "Playlists"
 #define DISC_PROPERTY_MAIN_FEATURE "MainFeature"
-
+*/
 /*
  *
  */

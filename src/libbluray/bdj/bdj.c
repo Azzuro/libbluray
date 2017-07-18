@@ -47,6 +47,7 @@
 #endif
 
 #ifdef _WIN32
+//#include <libloaderapi.h>
 #include <windows.h>
 #include <winreg.h>
 #endif
@@ -81,7 +82,7 @@ static void *_load_dll(const wchar_t *lib_path, const wchar_t *dll_search_path)
     pAddDllDirectory = (AddDllDirectoryF)GetProcAddress(GetModuleHandle(TEXT("kernel32.dll")), "AddDllDirectory");
     pRemoveDllDirectory = (RemoveDllDirectoryF)GetProcAddress(GetModuleHandle(TEXT("kernel32.dll")), "RemoveDllDirectory");
 
-    if (pAddDllDirectory && pRemoveDllDirectory) {
+    /*if (pAddDllDirectory && pRemoveDllDirectory) {
 
         result = LoadLibraryExW(lib_path, NULL,
                                LOAD_LIBRARY_SEARCH_SYSTEM32);
@@ -93,7 +94,8 @@ static void *_load_dll(const wchar_t *lib_path, const wchar_t *dll_search_path)
                                     LOAD_LIBRARY_SEARCH_USER_DIRS);
             pRemoveDllDirectory(cookie);
         }
-    } else {
+    }*///else 
+    {
         result = LoadLibraryW(lib_path);
         if (!result) {
             SetDllDirectoryW(dll_search_path);
