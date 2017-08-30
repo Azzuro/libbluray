@@ -34,7 +34,8 @@ public class HScreenRectangle {
         this.width = Math.max(0.0f, width);
         this.height = Math.max(0.0f, height);
     }
-
+// Custom MediaPortal
+/*
     public int hashCode() {
         int result = Float.hashCode(x);
         result = 31 * result + Float.hashCode(y);
@@ -42,7 +43,7 @@ public class HScreenRectangle {
         result = 31 * result + Float.hashCode(height);
         return result;
     }
-
+*/
     public boolean equals(Object obj)
     {
         if (!(obj instanceof HScreenRectangle))

@@ -28,11 +28,12 @@ public class HScreenPoint {
         this.x = x;
         this.y = y;
     }
-
+// Custom MediaPortal
+/*
     public int hashCode() {
         return Float.hashCode(x) + 31 * Float.hashCode(y);
     }
-
+*/
     public boolean equals(Object obj)
     {
         if (!(obj instanceof HScreenPoint))
