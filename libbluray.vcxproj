@@ -56,6 +56,7 @@
     <ClInclude Include="src\libbluray\bdnav\mpls_parse.h" />
     <ClInclude Include="src\libbluray\bdnav\navigation.h" />
     <ClInclude Include="src\libbluray\bdnav\sound_parse.h" />
+    <ClInclude Include="src\libbluray\bdnav\uo_mask.h" />
     <ClInclude Include="src\libbluray\bdnav\uo_mask_table.h" />
     <ClInclude Include="src\libbluray\bluray.h" />
     <ClInclude Include="src\libbluray\decoders\graphics_controller.h" />
@@ -122,6 +123,7 @@
     <ClCompile Include="src\libbluray\bdnav\mpls_parse.c" />
     <ClCompile Include="src\libbluray\bdnav\navigation.c" />
     <ClCompile Include="src\libbluray\bdnav\sound_parse.c" />
+    <ClCompile Include="src\libbluray\bdnav\uo_mask.c" />
     <ClCompile Include="src\libbluray\bluray.c" />
     <ClCompile Include="src\libbluray\decoders\graphics_controller.c" />
     <ClCompile Include="src\libbluray\decoders\graphics_processor.c" />

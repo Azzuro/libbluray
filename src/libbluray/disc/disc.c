@@ -582,8 +582,6 @@ int disc_cache_bdrom_file(BD_DISC *p, const char *rel_path, const char *cache_pa
     return 0;
 }
 
-#ifdef ENABLE_UDF
-
 /*
  * persistent properties storage
  */
@@ -662,7 +660,6 @@ char *disc_property_get(BD_DISC *p, const char *property)
     return result;
 }
 
-#endif
 
 /*
  * streams

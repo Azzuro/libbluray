@@ -273,6 +273,18 @@
     <ClInclude Include="src\libbluray\disc\properties.h">
       <Filter>Header Files\libbluray\disc</Filter>
     </ClInclude>
+    <ClInclude Include="src\file\mount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\file\mount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libbluray\bdnav\uo_mask.h">
+      <Filter>Header Files\libbluray\bdnav</Filter>
+    </ClInclude>
+    <ClInclude Include="src\file\mount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\util\logging.c">
@@ -430,6 +442,9 @@
     </ClCompile>
     <ClCompile Include="src\libbluray\disc\properties.c">
       <Filter>Source Files\libbluray\disc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libbluray\bdnav\uo_mask.c">
+      <Filter>Source Files\libbluray\bdnav</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
