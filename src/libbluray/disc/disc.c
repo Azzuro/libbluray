@@ -24,7 +24,7 @@
 #include "disc.h"
 
 #include "dec.h"
-// #include "properties.h"
+#include "properties.h"
 
 #include "util/logging.h"
 #include "util/macro.h"
