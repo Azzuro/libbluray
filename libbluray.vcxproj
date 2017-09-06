@@ -47,7 +47,6 @@
     <ClInclude Include="src\libbluray\bdj\native\org_videolan_Logger.h" />
     <ClInclude Include="src\libbluray\bdj\native\register_native.h" />
     <ClInclude Include="src\libbluray\bdj\native\util.h" />
-    <ClInclude Include="src\file\mount.h" />
     <ClInclude Include="src\libbluray\bdnav\bdid_parse.h" />
     <ClInclude Include="src\libbluray\bdnav\bdmv_parse.h" />
     <ClInclude Include="src\libbluray\bdnav\bdparse.h" />
@@ -265,7 +264,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBBLURAY_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(VisualStudioVersion)' == '12.0'">__STDC_FORMAT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>3rd_party\freetype2\include;$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rd_party\freetype2\include;$(ProjectDir);$(ProjectDir)includes;$(ProjectDir)src;$(ProjectDir)src\libbluray;$(ProjectDir)contrib\libudfread\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <CompileAs Condition="'$(VisualStudioVersion)' == '12.0'">CompileAsCpp</CompileAs>
     </ClCompile>

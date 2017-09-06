@@ -221,7 +221,7 @@
     </ClInclude>
     <ClInclude Include="src\libbluray\bdnav\bdmv_parse.h">
       <Filter>Header Files\libbluray\bdnav</Filter>
-    </ClInclude
+    </ClInclude>
     <ClInclude Include="src\file\libaacs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -232,9 +232,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\libbluray\bdj\native\util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file\mount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\libbluray\decoders\hdmv_pids.h">
@@ -261,9 +258,6 @@
     <ClInclude Include="src\util\refcnt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\file\mount.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\libbluray\bdj\bdjo_parse.h">
       <Filter>Header Files\libbluray\bdj</Filter>
     </ClInclude>
@@ -276,20 +270,8 @@
     <ClInclude Include="src\libbluray\disc\properties.h">
       <Filter>Header Files\libbluray\disc</Filter>
     </ClInclude>
-    <ClInclude Include="src\file\mount.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file\mount.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\libbluray\bdnav\uo_mask.h">
       <Filter>Header Files\libbluray\bdnav</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file\mount.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file\mount.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\libbluray\disc\udf_fs.h">
       <Filter>Header Files</Filter>
